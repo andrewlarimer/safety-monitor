@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ibmcloud sl vs create --datacenter=dal13 --hostname=finalproj100 --domain=w251.final --os=UBUNTU_16_64 --flavor AC1_16X120X25 --billing=hourly --san --disk=25 --disk=2000 --network 1000 --key=${IBM_KEY}

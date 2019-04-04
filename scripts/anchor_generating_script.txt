@@ -1,0 +1,14 @@
+import numpy as np
+
+xs = np.linspace(0.008, 0.68, 12)
+
+full_list = []
+for x in xs:
+    full_list.append(x)
+    full_list.append(x*1.125)
+    full_list.append(x*1.2)
+    full_list.append(x*3)
+
+full_string = ", ".join(full_list)
+
+print(full_string)

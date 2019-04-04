@@ -1,0 +1,1 @@
+python convert_weight.py --num_classes=3 --anchors_path=./construction_dataset/construction_anchors.txt --convert --freeze --image_h=360 --image_w=640

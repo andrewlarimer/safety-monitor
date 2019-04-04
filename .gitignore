@@ -1,0 +1,4 @@
+.DS_Store
+*/.DS_Store
+tensorflow-yolov3/checkpoint/yolov3*
+tensorflow-yolov3/construction_dataset/*.tfrecords
