@@ -89,6 +89,7 @@ def main(argv):
     flags = parser(description="freeze yolov3 graph from checkpoint file").parse_args()
     print("=> the input image size is [%d, %d]" %(flags.image_h, flags.image_w))
     anchors = utils.get_anchors(flags.anchors_path, flags.image_h, flags.image_w)
+    print("convert_weight num_anchors: " + str(len(anchors)))
     model = yolov3.yolov3(flags.num_classes, anchors)
 
     with tf.Graph().as_default() as graph:

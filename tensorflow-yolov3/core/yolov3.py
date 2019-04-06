@@ -72,6 +72,7 @@ class yolov3(object):
                          # [30 ,61], [62 , 45], [59 ,119],
                          # [116,90], [156,198], [373,326]]
         self._ANCHORS = anchors
+        print("yolo class num anchors: " + str(len(anchors)))
         self._BATCH_NORM_DECAY = batch_norm_decay
         self._LEAKY_RELU = leaky_relu
         self._NUM_CLASSES = num_classes
@@ -98,6 +99,7 @@ class yolov3(object):
     def _reorg_layer(self, feature_map, anchors):
 
         num_anchors = len(anchors) # num_anchors=3
+        print("num_anchors: " + str(num_anchors))
         grid_size = feature_map.shape.as_list()[1:3]
         # the downscale image in height and weight
         stride = tf.cast(self.img_size // grid_size, tf.float32) # [h,w] -> [y,x]

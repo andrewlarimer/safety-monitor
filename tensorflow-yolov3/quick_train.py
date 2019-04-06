@@ -40,7 +40,8 @@ is_training = tf.placeholder(tf.bool)
 example = tf.cond(is_training, lambda: trainset.get_next(), lambda: testset.get_next())
 
 images, *y_true = example
-print(y_true)
+print(images)
+
 model = yolov3.yolov3(NUM_CLASSES, ANCHORS)
 
 with tf.variable_scope('yolov3'):
