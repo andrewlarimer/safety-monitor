@@ -1,4 +1,6 @@
 .DS_Store
 */.DS_Store
-tensorflow-yolov3/checkpoint/yolov3*
-tensorflow-yolov3/construction_dataset/*.tfrecords
+keras-yolo3/model_data/yolo.5
+keras-yolo3/bottlenecks.npz
+keras-yolo3/yolov3.weights
+
