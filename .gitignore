@@ -1,6 +1,8 @@
 .DS_Store
 */.DS_Store
 keras-yolo3/model_data/yolo.5
+keras-yolo3/model_data/yolo_weights.5
 keras-yolo3/bottlenecks.npz
 keras-yolo3/yolov3.weights
-
+logs/000/*.h5
+*.h5
