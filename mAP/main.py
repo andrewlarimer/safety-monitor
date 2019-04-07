@@ -47,8 +47,8 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 GT_PATH = os.path.join(os.getcwd(), 'input', 'ground-truth')
 DR_PATH = os.path.join(os.getcwd(), 'input', 'detection-results')
 # if there are no images then no animation can be shown
-IMG_PATH = os.path.join(os.getcwd(), 'input', 'images-optional')
-if os.path.exists(IMG_PATH): 
+IMG_PATH = os.path.join(os.getcwd(), '..', 'construction_images')
+if os.path.exists(IMG_PATH):
     for dirpath, dirnames, files in os.walk(IMG_PATH):
         if not files:
             # no image files found
@@ -244,7 +244,7 @@ def draw_plot_func(dictionary, n_classes, window_title, plot_title, x_label, out
     sorted_dic_by_value = sorted(dictionary.items(), key=operator.itemgetter(1))
     # unpacking the list of tuples into two lists
     sorted_keys, sorted_values = zip(*sorted_dic_by_value)
-    # 
+    #
     if true_p_bar != "":
         """
          Special case to draw in:
@@ -307,7 +307,7 @@ def draw_plot_func(dictionary, n_classes, window_title, plot_title, x_label, out
     dpi = fig.dpi
     height_pt = n_classes * (tick_font_size * 1.4) # 1.4 (some spacing)
     height_in = height_pt / dpi
-    # compute the required figure height 
+    # compute the required figure height
     top_margin = 0.15 # in percentage of the figure height
     bottom_margin = 0.05 # in percentage of the figure height
     figure_height = height_in / (1 - top_margin - bottom_margin)

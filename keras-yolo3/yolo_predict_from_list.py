@@ -26,6 +26,7 @@ if __name__ == '__main__':
 
         these_predictions = yolo.detect_image(image, img_src.split('/')[-1])
         img_filename = img_src.split('/')[-1]
+        text_filename = img_filename.split('.')[0] + ".txt"
 
-        with open(f"../logs/000/detection-predictions/{img_filename}",'w') as f:
+        with open(f"../logs/000/detection-predictions/{text_filename}",'w') as f:
             f.write('\n'.join(these_predictions))
